@@ -1,0 +1,106 @@
+$primary_color: #293241;
+$secondary_color: #eef4ed;
+$color_3: #073b4c;
+$color_4: #ee6c4d;
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300&family=Open+Sans:wght@300&display=swap");
+
+a {
+  text-decoration: none;
+}
+.container {
+  font-family: "Jost", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  .header,
+  a {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    background-color: $primary_color;
+    color: $secondary_color;
+    a {
+      background-color: $color_4;
+      color: $secondary_color;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+
+  .main_container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .upload_card {
+    padding-top: 2rem;
+  }
+  .card__info {
+    display: flex;
+    padding: 5rem 0;
+    justify-content: space-between;
+    background-color: $secondary_color;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    .card__formDetails {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin: 10px 0;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    input {
+      height: 28px;
+      width: 300px;
+      border-radius: 5px;
+      border: none;
+      margin-right: 10px;
+
+      box-shadow: rgba(238, 244, 237, 0.7) 0px 30px 60px -12px inset,
+        rgba(0, 0, 0, 0.7) 0px 18px 36px -18px inset;
+    }
+    textarea {
+      border-radius: 5px;
+      padding: 5px 10px;
+      box-shadow: rgba(238, 244, 237, 0.7) 0px 30px 60px -12px inset,
+        rgba(0, 0, 0, 0.7) 0px 18px 36px -18px inset;
+      border: none;
+    }
+
+    .submitButton {
+      margin: 20px 0;
+      background-color: $color_4;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 16px;
+      color: $secondary_color;
+    }
+
+    .card__finalView {
+      background-color: $primary_color;
+      border-radius: 10px;
+      height: 500px;
+      width: 500px;
+      padding: 10px;
+      color: $secondary_color;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+        rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      h1 {
+        text-align: center;
+        padding: 30px 0;
+      }
+
+      h3 {
+        padding: 10px 0;
+        border-bottom: 0.1px solid $secondary_color;
+      }
+    }
+  }
+}
