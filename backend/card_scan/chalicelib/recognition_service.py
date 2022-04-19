@@ -1,6 +1,5 @@
 import boto3
 
-
 class RecognitionService:
     def __init__(self, storage_service):
         self.client = boto3.client('rekognition')

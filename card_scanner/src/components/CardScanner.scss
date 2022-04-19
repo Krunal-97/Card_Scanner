@@ -10,11 +10,12 @@ a {
 .container {
   font-family: "Jost", sans-serif;
   font-family: "Open Sans", sans-serif;
+  animation: slideInFromTop 0.5s ease-in;
   .header,
   a {
     display: flex;
     justify-content: space-between;
-    padding: 10px 30px;
+    padding: 5px 10px;
     background-color: $primary_color;
     color: $secondary_color;
     a {
@@ -38,12 +39,16 @@ a {
   .card__info {
     display: flex;
     padding: 5rem 0;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
     background-color: $secondary_color;
     padding: 20px;
     margin-top: 20px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    .card__form {
+      animation: slideInFromLeft 0.5s ease-in;
+    }
     .card__formDetails {
       display: flex;
       flex-direction: column;
@@ -55,11 +60,13 @@ a {
     }
 
     input {
-      height: 28px;
       width: 300px;
       border-radius: 5px;
       border: none;
       margin-right: 10px;
+      padding: 0.5rem;
+      color: black;
+      font-weight: bold;
 
       box-shadow: rgba(238, 244, 237, 0.7) 0px 30px 60px -12px inset,
         rgba(0, 0, 0, 0.7) 0px 18px 36px -18px inset;
@@ -73,20 +80,30 @@ a {
     }
 
     .submitButton {
-      margin: 20px 0;
+      margin: 0.5rem 0.5rem;
       background-color: $color_4;
       border: none;
       padding: 10px;
       border-radius: 5px;
       font-size: 16px;
       color: $secondary_color;
+      &:hover {
+        background-color: $primary_color;
+        color: $secondary_color;
+      }
     }
 
     .card__finalView {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      animation: slideInFromRight 0.5s ease-in;
       background-color: $primary_color;
       border-radius: 10px;
-      height: 500px;
-      width: 500px;
+
+      height: 350px;
+      width: 450px;
       padding: 10px;
       color: $secondary_color;
       box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
@@ -102,5 +119,56 @@ a {
         border-bottom: 0.1px solid $secondary_color;
       }
     }
+  }
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+
+  outline: inherit;
+}
+
+img {
+  animation: slideInFromTop 0.5s ease-in;
+  height: 250px;
+  width: 400px;
+}
+
+// Animations
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }

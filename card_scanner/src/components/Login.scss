@@ -1,0 +1,43 @@
+$primary_color: #293241;
+$secondary_color: #eef4ed;
+$color_opt_1: #ee6c4d;
+$color_opt_2: #073b4c;
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .head {
+    padding: 1rem;
+    color: $color_opt_2;
+  }
+  input {
+    padding: 0.5rem;
+    margin: 0.5rem;
+  }
+  .btn {
+    padding: 0.3rem 1rem;
+    margin: 1rem;
+    color: $secondary_color;
+    a {
+      text-decoration: none;
+      color: $secondary_color;
+    }
+    &:hover {
+      background-color: $primary_color;
+    }
+    .new {
+      padding: 0.1rem 0.5rem;
+    }
+  }
+}
+.container-login {
+  background-color: $secondary_color;
+  height: 300px;
+  width: 300px;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}

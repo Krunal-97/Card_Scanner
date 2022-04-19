@@ -1,0 +1,164 @@
+// @import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+
+$primary_color: #293241;
+$secondary_color: #eef4ed;
+$color_opt_1: #ee6c4d;
+$color_opt_2: #073b4c;
+
+.search_form_container {
+  display: grid;
+  grid-template-columns: repeat(0, 1fr);
+  align-items: center;
+  justify-content: center;
+  padding: 50px 100px;
+  text-align: center;
+
+  .head_text {
+    h4 {
+      font-size: 20px;
+    }
+  }
+
+  input {
+    margin: 25px 0;
+    padding: 10px;
+  }
+
+  button {
+    text-align: center;
+    background-color: $color_opt_1;
+    padding: 5px 20px;
+    margin: 0 10px;
+    color: $color_opt_2;
+    border: none;
+    border-radius: 5px;
+    color: $primary_color;
+    font-size: 18px;
+    font-weight: bold;
+    &:hover {
+      background-color: $primary_color;
+      color: $secondary_color;
+    }
+  }
+  .ans {
+    animation: slideInFromTop 0.2s ease-in;
+    span {
+      font-weight: bold;
+      font-size: 24px;
+    }
+    padding: 20px 10px;
+    margin: 35px 0;
+    background-color: lightgray;
+    color: $primary_color;
+    border-radius: 5px;
+  }
+}
+#customers {
+  animation: slideInFromTop 0.5s ease-in;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers tr {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: $primary_color;
+  color: $secondary_color;
+}
+
+#customers td,
+#customers th {
+  border: 1px solid #dddddd;
+  padding: 8px;
+}
+
+#customers td {
+  background-color: $secondary_color;
+  color: $primary_color;
+}
+.opButton {
+  margin: 0;
+  padding: 0;
+}
+.search_form_container button {
+  color: $secondary_color;
+  a {
+    text-decoration: none;
+    color: $secondary_color;
+  }
+  padding: 0.5rem;
+  margin: 2rem;
+
+  margin: 0 auto;
+}
+.searchSec {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  button {
+    margin-right: 1rem;
+  }
+  .search_input {
+    input {
+      margin: 1rem;
+    }
+  }
+}
+.addNewCard {
+  background-color: $color_opt_1;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  margin: 0 auto;
+  a {
+    color: $secondary_color;
+    font-weight: bold;
+    font-size: 22px;
+  }
+  &:hover {
+    background-color: $primary_color;
+  }
+}
+
+.userVal {
+  font-weight: bold;
+  font-size: 25px;
+  color: $color_opt_1;
+}
+
+// Animations
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

@@ -2,10 +2,8 @@ import boto3
 
 
 class MedComprehendService:
-
     def __init__(self):
         self.client = boto3.client('comprehendmedical')
-
 
     def detect_entities(self, txt):
     	

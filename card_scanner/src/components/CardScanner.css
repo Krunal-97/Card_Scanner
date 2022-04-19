@@ -6,6 +6,8 @@ a {
 .container {
   font-family: "Jost", sans-serif;
   font-family: "Open Sans", sans-serif;
+  -webkit-animation: slideInFromTop 0.5s ease-in;
+          animation: slideInFromTop 0.5s ease-in;
 }
 
 .container .header,
@@ -16,7 +18,7 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 10px 30px;
+  padding: 5px 10px;
   background-color: #293241;
   color: #eef4ed;
 }
@@ -45,15 +47,23 @@ a {
   display: -ms-flexbox;
   display: flex;
   padding: 5rem 0;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #eef4ed;
   padding: 20px;
   margin-top: 20px;
   border-radius: 10px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.container .card__info .card__form {
+  -webkit-animation: slideInFromLeft 0.5s ease-in;
+          animation: slideInFromLeft 0.5s ease-in;
 }
 
 .container .card__info .card__formDetails {
@@ -73,11 +83,13 @@ a {
 }
 
 .container .card__info input {
-  height: 28px;
   width: 300px;
   border-radius: 5px;
   border: none;
   margin-right: 10px;
+  padding: 0.5rem;
+  color: black;
+  font-weight: bold;
   -webkit-box-shadow: rgba(238, 244, 237, 0.7) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.7) 0px 18px 36px -18px inset;
           box-shadow: rgba(238, 244, 237, 0.7) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.7) 0px 18px 36px -18px inset;
 }
@@ -91,7 +103,7 @@ a {
 }
 
 .container .card__info .submitButton {
-  margin: 20px 0;
+  margin: 0.5rem 0.5rem;
   background-color: #ee6c4d;
   border: none;
   padding: 10px;
@@ -100,11 +112,31 @@ a {
   color: #eef4ed;
 }
 
+.container .card__info .submitButton:hover {
+  background-color: #293241;
+  color: #eef4ed;
+}
+
 .container .card__info .card__finalView {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation: slideInFromRight 0.5s ease-in;
+          animation: slideInFromRight 0.5s ease-in;
   background-color: #293241;
   border-radius: 10px;
-  height: 500px;
-  width: 500px;
+  height: 350px;
+  width: 450px;
   padding: 10px;
   color: #eef4ed;
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
@@ -119,5 +151,110 @@ a {
 .container .card__info .card__finalView h3 {
   padding: 10px 0;
   border-bottom: 0.1px solid #eef4ed;
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+img {
+  -webkit-animation: slideInFromTop 0.5s ease-in;
+          animation: slideInFromTop 0.5s ease-in;
+  height: 250px;
+  width: 400px;
+}
+
+@-webkit-keyframes slideInFromLeft {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes slideInFromRight {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes slideInFromTop {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes slideInFromBottom {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 /*# sourceMappingURL=CardScanner.css.map */
